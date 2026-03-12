@@ -1,0 +1,29 @@
+# Netlify/Vercel Redirects Configuration
+
+# .html 확장자 제거 (Clean URLs)
+/faq.html           /faq                301
+/notice.html        /notice             301
+/press.html         /press              301
+
+# Clean URLs를 .html 파일로 연결
+/faq                /faq.html           200
+/notice             /notice.html        200
+/press              /press.html         200
+
+# 이전 URL 리디렉션
+/about              /                   301
+/about.html         /                   301
+/services           /                   301
+/services.html      /                   301
+/contact            /                   301
+/contact.html       /                   301
+
+# HTTPS 강제
+http://supportree.net/*    https://supportree.net/:splat    301!
+http://www.supportree.net/*    https://supportree.net/:splat    301!
+
+# www 제거
+https://www.supportree.net/*    https://supportree.net/:splat    301!
+
+# 404 페이지
+/*    /index.html    404

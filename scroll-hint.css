@@ -1,0 +1,430 @@
+/* ==================== 스크롤 힌트 오버레이 (STEP 1 전용) ==================== */
+
+/* 오버레이 컨테이너 - STEP 1 카드에만 표시, 기본적으로 숨김 */
+.scroll-hint-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none; /* 기본적으로 숨김, JS에서 모바일일 때만 표시 */
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 활성화 상태 */
+.scroll-hint-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* 힌트 컨테이너 - 정중앙 오른쪽에 배치 */
+.scroll-hint-container {
+    position: absolute;
+    right: 15px; /* 오른쪽에서 15px 떨어진 위치 */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 101;
+}
+
+/* 발광 효과 배경 */
+.scroll-hint-glow {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(
+        circle,
+        rgba(0, 208, 131, 0.25) 0%,
+        rgba(0, 208, 131, 0.15) 40%,
+        rgba(0, 208, 131, 0.05) 70%,
+        transparent 100%
+    );
+    border-radius: 50%;
+    animation: glowPulse 2.5s ease-in-out infinite;
+    filter: blur(8px);
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+}
+
+/* 화살표 컨테이너 */
+.scroll-hint-arrows {
+    display: flex;
+    align-items: center;
+    gap: -8px; /* 화살표 간격을 겹치게 */
+    position: relative;
+}
+
+/* 개별 화살표 스타일 */
+.scroll-arrow {
+    filter: drop-shadow(0 2px 8px rgba(0, 208, 131, 0.4));
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-arrow path {
+    fill: #00D083;
+}
+
+/* 각 화살표에 다른 애니메이션 딜레이 적용 */
+.scroll-arrow-1 {
+    animation: arrowSlide 1.8s ease-in-out infinite;
+    animation-delay: 0s;
+    opacity: 0.4;
+}
+
+.scroll-arrow-2 {
+    animation: arrowSlide 1.8s ease-in-out infinite;
+    animation-delay: 0.3s;
+    opacity: 0.7;
+}
+
+.scroll-arrow-3 {
+    animation: arrowSlide 1.8s ease-in-out infinite;
+    animation-delay: 0.6s;
+    opacity: 1;
+}
+
+/* 화살표 슬라이드 애니메이션 - 오른쪽으로 흐르는 효과 */
+@keyframes arrowSlide {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateX(8px) scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* 텍스트 힌트 */
+.scroll-hint-text {
+    font-size: 13px;
+    font-weight: 700;
+    color: #00D083;
+    background: linear-gradient(135deg, #FFFFFF 0%, rgba(255, 255, 255, 0.95) 100%);
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 
+        0 2px 8px rgba(0, 208, 131, 0.15),
+        0 4px 16px rgba(0, 208, 131, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1.5px solid rgba(0, 208, 131, 0.3);
+    letter-spacing: 0.3px;
+    position: relative;
+    animation: textBounce 2.5s ease-in-out infinite;
+    margin-top: 4px;
+    white-space: nowrap;
+}
+
+@keyframes textBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+/* 텍스트에 섬세한 발광 효과 */
+.scroll-hint-text::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, rgba(0, 208, 131, 0.2), rgba(0, 208, 131, 0.05));
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0;
+    animation: textGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* 페이드 아웃 애니메이션 */
+.scroll-hint-overlay.fade-out {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 모바일 환경에서만 표시 (데스크톱에서는 완전히 숨김) */
+@media (min-width: 769px) {
+    .scroll-hint-overlay {
+        display: none !important;
+    }
+}
+
+/* 작은 모바일 화면 최적화 */
+@media (max-width: 380px) {
+    .scroll-hint-container {
+        right: 10px;
+    }
+    
+    .scroll-arrow {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .scroll-hint-text {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+    
+    .scroll-hint-glow {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* 매우 작은 화면 (320px 이하) */
+@media (max-width: 320px) {
+    .scroll-hint-container {
+        right: 8px;
+    }
+    
+    .scroll-arrow {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .scroll-hint-text {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+}
+
+/* 고해상도 디스플레이 최적화 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .scroll-arrow {
+        filter: drop-shadow(0 2px 10px rgba(0, 208, 131, 0.5));
+    }
+    
+    .scroll-hint-text {
+        box-shadow: 
+            0 3px 10px rgba(0, 208, 131, 0.2),
+            0 5px 20px rgba(0, 208, 131, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+}
+
+/* 접근성: 모션 감소 설정 시 애니메이션 단순화 */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-hint-overlay,
+    .scroll-hint-glow,
+    .scroll-arrow,
+    .scroll-hint-text,
+    .scroll-hint-text::before {
+        animation: none !important;
+        transition: opacity 0.3s ease !important;
+    }
+    
+    .scroll-arrow-1,
+    .scroll-arrow-2 {
+        opacity: 0.5;
+    }
+    
+    .scroll-arrow-3 {
+        opacity: 1;
+    }
+}
+
+/* 다크모드 대응 (필요시) */
+@media (prefers-color-scheme: dark) {
+    .scroll-hint-text {
+        background: linear-gradient(135deg, rgba(26, 26, 26, 0.98) 0%, rgba(26, 26, 26, 0.95) 100%);
+        color: #76E0BA;
+        border-color: rgba(118, 224, 186, 0.4);
+    }
+    
+    .scroll-arrow path {
+        fill: #76E0BA;
+    }
+    
+    .scroll-hint-glow {
+        background: radial-gradient(
+            circle,
+            rgba(118, 224, 186, 0.2) 0%,
+            rgba(118, 224, 186, 0.12) 40%,
+            rgba(118, 224, 186, 0.04) 70%,
+            transparent 100%
+        );
+    }
+}
+
+/* ==================== 모바일 전용 스크롤 안내 문구 (카드 영역 하단) ==================== */
+
+/* 기본 상태: 완전히 숨김 (JS에서 display 제어) */
+.mobile-scroll-guide {
+    display: none; /* JS에서 display: flex로 변경 */
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* 활성화 상태 (JS에서 클래스 추가) */
+.mobile-scroll-guide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 페이드 아웃 애니메이션 */
+.mobile-scroll-guide.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+/* 안내 문구 컨테이너 */
+.scroll-guide-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, rgba(0, 208, 131, 0.08) 0%, rgba(118, 224, 186, 0.08) 100%);
+    border: 2px solid rgba(0, 208, 131, 0.2);
+    border-radius: 50px;
+    box-shadow: 
+        0 4px 16px rgba(0, 208, 131, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    animation: guidePulse 2.5s ease-in-out infinite;
+}
+
+/* 펄스 애니메이션 */
+@keyframes guidePulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 
+            0 4px 16px rgba(0, 208, 131, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 
+            0 6px 20px rgba(0, 208, 131, 0.18),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+}
+
+/* 아이콘 스타일 */
+.scroll-guide-icon {
+    width: 20px;
+    height: 20px;
+    color: #00D083;
+    animation: iconSlide 1.5s ease-in-out infinite;
+}
+
+.scroll-guide-icon path {
+    fill: currentColor;
+}
+
+/* 아이콘 슬라이드 애니메이션 */
+@keyframes iconSlide {
+    0%, 100% {
+        transform: translateX(0);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateX(4px);
+        opacity: 1;
+    }
+}
+
+/* 텍스트 스타일 */
+.scroll-guide-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #00D083;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+/* 모바일 작은 화면 최적화 (380px 이하) */
+@media (max-width: 380px) {
+    .scroll-guide-content {
+        padding: 10px 20px;
+        gap: 6px;
+    }
+    
+    .scroll-guide-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .scroll-guide-text {
+        font-size: 13px;
+    }
+}
+
+/* 매우 작은 화면 (320px 이하) */
+@media (max-width: 320px) {
+    .scroll-guide-content {
+        padding: 8px 16px;
+    }
+    
+    .scroll-guide-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .scroll-guide-text {
+        font-size: 12px;
+    }
+}
+
+/* 접근성: 모션 감소 설정 시 애니메이션 단순화 */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-guide-content,
+    .scroll-guide-icon {
+        animation: none !important;
+    }
+    
+    .mobile-scroll-guide {
+        transition: opacity 0.3s ease !important;
+    }
+}
+
+/* 다크모드 대응 (안내 문구) */
+@media (prefers-color-scheme: dark) {
+    .scroll-guide-content {
+        background: linear-gradient(135deg, rgba(118, 224, 186, 0.12) 0%, rgba(118, 224, 186, 0.08) 100%);
+        border-color: rgba(118, 224, 186, 0.3);
+    }
+    
+    .scroll-guide-icon {
+        color: #76E0BA;
+    }
+    
+    .scroll-guide-text {
+        color: #76E0BA;
+    }
+}

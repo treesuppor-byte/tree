@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    
+    <!-- SEO 메타 태그 -->
+    <meta name="description" content="서포트리 공지사항 - 카드매출 선지급 서비스 업데이트, 이벤트, 중요 안내사항을 확인하세요. 신용조회 없는 자영업자 할인매매 소식.">
+    <meta name="keywords" content="서포트리 공지, 할인매매 소식, 카드매출 선지급 업데이트, 서포트리 이벤트, 자영업자 대출 소식">
+    <meta name="author" content="서포트리">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://supportree.net/notice">
+    
+    <!-- Open Graph / Facebook / KakaoTalk / Naver -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supportree.net/notice">
+    <meta property="og:title" content="공지사항 - 서포트리 카드매출 선지급 할인매매">
+    <meta property="og:description" content="서포트리 서비스 업데이트, 이벤트 및 중요 안내사항. 신용조회 없이 최단 3일 입금.">
+    <meta property="og:image" content="https://supportree.net/images/og-image.jpg?v=1">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="서포트리 공지사항 - 카드매출 선지급 할인매매">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="서포트리">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://supportree.net/notice">
+    <meta name="twitter:title" content="공지사항 - 서포트리 카드매출 선지급 할인매매">
+    <meta name="twitter:description" content="서포트리 서비스 업데이트, 이벤트 및 중요 안내사항. 신용조회 없이 최단 3일 입금.">
+    <meta name="twitter:image" content="https://supportree.net/images/og-image.jpg?v=1">
+    <meta name="twitter:image:alt" content="서포트리 공지사항 - 카드매출 선지급 할인매매">
+    
+    <title>공지사항 - 서포트리 | 카드매출 선지급 서비스 소식</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 페이지 전용 스타일 */
+        body {
+            background: #FAFBFC;
+        }
+
+        .page-hero {
+            margin-top: 80px;
+            padding: 80px 0 60px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(250, 251, 252, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600&q=80') center/cover;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 50px,
+                rgba(118, 224, 186, 0.03) 50px,
+                rgba(118, 224, 186, 0.03) 51px
+            ),
+            repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 50px,
+                rgba(118, 224, 186, 0.03) 50px,
+                rgba(118, 224, 186, 0.03) 51px
+            );
+            opacity: 0.4;
+        }
+        
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(118, 224, 186, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(0, 208, 131, 0.06) 0%, transparent 50%);
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .page-hero-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            animation: bellRing 2s ease-in-out infinite;
+        }
+
+        @keyframes bellRing {
+            0%, 100% { transform: rotate(0deg); }
+            10%, 30% { transform: rotate(-15deg); }
+            20%, 40% { transform: rotate(15deg); }
+            50% { transform: rotate(0deg); }
+        }
+
+        .page-hero-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--navy-blue);
+            margin-bottom: 16px;
+        }
+
+        .page-hero-subtitle {
+            font-size: 18px;
+            color: var(--text-gray);
+        }
+
+        .notices-section {
+            padding: 80px 0;
+        }
+
+        .notices-grid {
+            display: grid;
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .notice-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .notice-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-green);
+        }
+
+        .notice-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .notice-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-lime));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(118, 224, 186, 0.3);
+        }
+
+        .notice-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .notice-title-wrapper {
+            flex: 1;
+        }
+
+        .notice-badges {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .notice-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .badge-hot {
+            background: linear-gradient(135deg, #FF6B6B, #FF4757);
+            color: white;
+            box-shadow: 0 2px 8px rgba(255, 71, 87, 0.3);
+        }
+
+        .badge-new {
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-lime));
+            color: white;
+            box-shadow: 0 2px 8px rgba(118, 224, 186, 0.3);
+        }
+
+        .badge-notice {
+            background: #F0F0F0;
+            color: #666;
+        }
+
+        .notice-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--navy-blue);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .notice-date {
+            font-size: 14px;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .notice-summary {
+            font-size: 15px;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .notice-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, margin-top 0.4s ease;
+        }
+
+        .notice-content.active {
+            max-height: 1000px;
+            margin-top: 16px;
+        }
+
+        .notice-detail {
+            padding: 20px;
+            background: var(--light-green);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .notice-detail p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .notice-detail p:last-child {
+            margin-bottom: 0;
+        }
+
+        .notice-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-top: 12px;
+        }
+
+        .toggle-icon {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s;
+        }
+
+        .notice-card.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark-green), var(--vibrant-green));
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-title {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .cta-subtitle {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-green);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: var(--kakao-yellow);
+            color: var(--kakao-text);
+        }
+
+        .btn-secondary:hover {
+            background: #FFE933;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(245, 228, 28, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .page-hero-title {
+                font-size: 32px;
+            }
+
+            .page-hero-subtitle {
+                font-size: 16px;
+            }
+
+            .notice-card {
+                padding: 24px;
+            }
+
+            .notice-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .notice-title {
+                font-size: 18px;
+            }
+
+            .cta-title {
+                font-size: 28px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn-cta {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo-section">
+                    <img src="images/logo.png" 
+                         alt="Supportree Logo" 
+                         class="logo-icon"
+                         onerror="this.style.display='none'">
+                </a>
+                <nav class="nav-menu">
+                    <div class="nav-dropdown">
+                        <a href="index.html#about" class="nav-link">서포트리 소개</a>
+                        <div class="dropdown-content">
+                            <a href="index.html#process" class="dropdown-link">진행과정</a>
+                            <a href="index.html#benefits" class="dropdown-link">서비스 강점</a>
+                            <a href="index.html#testimonials" class="dropdown-link">고객후기</a>
+                            <a href="index.html#cta" class="dropdown-link">신청 방법</a>
+                        </div>
+                    </div>
+                    <a href="/press" class="nav-link">보도자료</a>
+                    <a href="/faq" class="nav-link">자주 묻는 질문</a>
+                    <a href="/notice" class="nav-link active">공지사항</a>
+                </nav>
+                <!-- 모바일 햄버거 메뉴 -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <svg class="page-hero-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32" cy="32" r="30" fill="url(#bellGradient)" opacity="0.2"/>
+                    <path d="M32 8C29.79 8 28 9.79 28 12V13.42C22.84 14.84 19 19.62 19 25.33V35L15 39V41H49V39L45 35V25.33C45 19.62 41.16 14.84 36 13.42V12C36 9.79 34.21 8 32 8ZM32 53C34.76 53 37 50.76 37 48H27C27 50.76 29.24 53 32 53Z" fill="url(#bellGradient2)"/>
+                    <circle cx="44" cy="16" r="8" fill="#FF4757"/>
+                    <defs>
+                        <linearGradient id="bellGradient" x1="2" y1="2" x2="62" y2="62" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#76E0BA"/>
+                            <stop offset="1" stop-color="#16D990"/>
+                        </linearGradient>
+                        <linearGradient id="bellGradient2" x1="15" y1="8" x2="49" y2="53" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#44BB89"/>
+                            <stop offset="1" stop-color="#00D083"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h1 class="page-hero-title">공지사항</h1>
+                <p class="page-hero-subtitle">서포트리의 최신 소식과 중요 안내사항을 확인하세요</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 공지사항 섹션 -->
+    <section class="notices-section">
+        <div class="container">
+            <div class="notices-grid">
+                <!-- 공지사항 1 -->
+                <div class="notice-card" onclick="toggleNotice(this)">
+                    <div class="notice-header">
+                        <div class="notice-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L4 7V10C4 16 7.336 21.172 12 22C16.664 21.172 20 16 20 10V7L12 2Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="notice-title-wrapper">
+                            <div class="notice-badges">
+                                <span class="notice-badge badge-hot">HOT</span>
+                            </div>
+                            <h3 class="notice-title">2025년 개인사업자 만족도 1위 달성</h3>
+                            <p class="notice-date">2026.01.21</p>
+                        </div>
+                    </div>
+                    <p class="notice-summary">서포트리가 2025년 개인사업자 만족도 1위로 선정되었습니다.</p>
+                    <div class="notice-content">
+                        <div class="notice-detail">
+                            <p><strong>선정 배경:</strong></p>
+                            <p>• 서비스 이용 편의성, 자금 접근성, 신뢰도, 전반적인 서비스 만족도를 종합 평가</p>
+                            <p>• 빠른 자금 지원과 사용자 중심의 서비스 운영에서 높은 점수 획득</p>
+                            <p>• 복잡한 서류 절차 없이 카드매출 내역만으로 자금 선지급 가능</p>
+                            <p><strong>사업자 상생 프로젝트:</strong></p>
+                            <p>• 단순한 금융 지원을 넘어 개인사업자와의 상생을 핵심 가치로 운영</p>
+                            <p>• 지속 가능한 성장을 돕는 다양한 지원 프로그램 제공</p>
+                            <p>• 개인사업자의 안정적인 사업 운영을 위한 맞춤형 솔루션</p>
+                            <p><strong>감사 인사:</strong> 고객님들의 성원에 힘입어 더 나은 서비스로 보답하겠습니다</p>
+                        </div>
+                    </div>
+                    <div class="notice-toggle">
+                        <span>자세히 보기</span>
+                        <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- 공지사항 3 -->
+                <div class="notice-card" onclick="toggleNotice(this)">
+                    <div class="notice-header">
+                        <div class="notice-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 17V15H13V17H11ZM13 13H11V7H13V13Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="notice-title-wrapper">
+                            <div class="notice-badges">
+                                <span class="notice-badge badge-new">NEW</span>
+                            </div>
+                            <h3 class="notice-title">카드매출 할인매매 서비스 이용 안내</h3>
+                            <p class="notice-date">2026.01.20</p>
+                        </div>
+                    </div>
+                    <p class="notice-summary">서포트리 카드매출 할인매매 서비스의 주요 특징과 이용 방법을 안내드립니다.</p>
+                    <div class="notice-content">
+                        <div class="notice-detail">
+                            <p><strong>서비스 특징:</strong></p>
+                            <p>• 신용 조회 없이 과거 카드매출 데이터만으로 한도 산정</p>
+                            <p>• 일 카드매출의 최대 10배까지 선지급 가능</p>
+                            <p>• 평일 기준 최대 3일 이내 자금 지급</p>
+                            <p>• 복잡한 서류 절차 없이 간편한 온라인 신청</p>
+                            <p>• 신용등급에 영향 없이 이용 가능</p>
+                            <p><strong>신청 방법:</strong></p>
+                            <p>1. 전화 상담: 1660-1241 (평일 9:00~18:00)</p>
+                            <p>2. 카카오톡 상담: 빠른 상담 버튼 클릭</p>
+                            <p>3. 온라인 신청: 메인 페이지에서 신청하기</p>
+                        </div>
+                    </div>
+                    <div class="notice-toggle">
+                        <span>자세히 보기</span>
+                        <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- 공지사항 4 -->
+                <div class="notice-card" onclick="toggleNotice(this)">
+                    <div class="notice-header">
+                        <div class="notice-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.8 10.9C9.53 10.31 8.8 9.7 8.8 8.75C8.8 7.66 9.81 6.9 11.5 6.9C13.28 6.9 13.94 7.75 14 9H16.21C16.14 7.28 15.09 5.7 13 5.19V3H10V5.16C8.06 5.58 6.5 6.84 6.5 8.77C6.5 11.08 8.41 12.23 11.2 12.9C13.7 13.5 14.2 14.38 14.2 15.31C14.2 16 13.71 17.1 11.5 17.1C9.44 17.1 8.63 16.18 8.52 15H6.32C6.44 17.19 8.08 18.42 10 18.83V21H13V18.85C14.95 18.48 16.5 17.35 16.5 15.3C16.5 12.46 14.07 11.49 11.8 10.9Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="notice-title-wrapper">
+                            <div class="notice-badges">
+                                <span class="notice-badge badge-notice">공지</span>
+                            </div>
+                            <h3 class="notice-title">투명한 수수료 체계 안내</h3>
+                            <p class="notice-date">2026.01.15</p>
+                        </div>
+                    </div>
+                    <p class="notice-summary">서포트리는 투명한 수수료 체계로 숨겨진 비용 없이 안심하고 이용하실 수 있습니다.</p>
+                    <div class="notice-content">
+                        <div class="notice-detail">
+                            <p><strong>무료 서비스:</strong></p>
+                            <p>• 상담료: 무료</p>
+                            <p>• 서류 심사비: 무료</p>
+                            <p>• 계약 수수료: 무료</p>
+                            <p>• 중도 상환 수수료: 무료</p>
+                            <p><strong>수수료 안내:</strong></p>
+                            <p>• 할인매매 수수료는 카드매출 규모와 상환 기간에 따라 산정됩니다</p>
+                            <p>• 계약 전 수수료를 명확하게 안내드리며, 숨겨진 비용은 일체 없습니다</p>
+                            <p>• 자세한 수수료는 상담 시 개별 안내해드립니다</p>
+                        </div>
+                    </div>
+                    <div class="notice-toggle">
+                        <span>자세히 보기</span>
+                        <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- 공지사항 5 -->
+                <div class="notice-card" onclick="toggleNotice(this)">
+                    <div class="notice-header">
+                        <div class="notice-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 1.01L7 1C5.9 1 5 1.9 5 3V21C5 22.1 5.9 23 7 23H17C18.1 23 19 22.1 19 21V3C19 1.9 18.1 1.01 17 1.01ZM17 19H7V5H17V19Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="notice-title-wrapper">
+                            <div class="notice-badges">
+                                <span class="notice-badge badge-notice">공지</span>
+                            </div>
+                            <h3 class="notice-title">서포트리 전용 단말기 안내</h3>
+                            <p class="notice-date">2026.01.10</p>
+                        </div>
+                    </div>
+                    <p class="notice-summary">계약 후 전용 단말기를 발송해드리며, 매장에서 사용하시면 자동으로 매출이 확인됩니다.</p>
+                    <div class="notice-content">
+                        <div class="notice-detail">
+                            <p><strong>단말기 발송:</strong></p>
+                            <p>• 계약서 작성 완료 후 전용 단말기를 매장으로 발송해드립니다</p>
+                            <p>• 배송 기간: 1~2일 (영업일 기준)</p>
+                            <p>• 설치 및 사용 방법은 간단한 매뉴얼과 함께 제공됩니다</p>
+                            <p><strong>단말기 사용:</strong></p>
+                            <p>• 기존 카드 단말기와 동일하게 사용하시면 됩니다</p>
+                            <p>• 카드매출이 자동으로 집계되어 한도 관리가 편리합니다</p>
+                            <p>• 단말기 사용이 확인되면 약정 금액을 입금해드립니다</p>
+                        </div>
+                    </div>
+                    <div class="notice-toggle">
+                        <span>자세히 보기</span>
+                        <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- 공지사항 6 -->
+                <div class="notice-card" onclick="toggleNotice(this)">
+                    <div class="notice-header">
+                        <div class="notice-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6C4.9 2 4.01 2.9 4.01 4L4 20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="notice-title-wrapper">
+                            <div class="notice-badges">
+                                <span class="notice-badge badge-notice">공지</span>
+                            </div>
+                            <h3 class="notice-title">신청 자격 및 필요 서류 안내</h3>
+                            <p class="notice-date">2026.01.05</p>
+                        </div>
+                    </div>
+                    <p class="notice-summary">서포트리 할인매매 서비스를 이용하시기 위한 자격 요건과 필요 서류를 안내드립니다.</p>
+                    <div class="notice-content">
+                        <div class="notice-detail">
+                            <p><strong>신청 자격:</strong></p>
+                            <p>• 사업자등록증을 보유한 소상공인 및 자영업자</p>
+                            <p>• 최근 3개월 이상의 카드매출 실적 보유</p>
+                            <p>• 모든 업종 가능 (음식점, 카페, 병원, 소매점 등)</p>
+                            <p><strong>필요 서류:</strong></p>
+                            <p>• 사업자등록증 사본</p>
+                            <p>• 대표자 신분증 사본</p>
+                            <p>• 최근 3개월 카드매출 내역</p>
+                            <p>• 통장 사본 (입금 계좌 확인용)</p>
+                            <p><strong>참고사항:</strong></p>
+                            <p>• 신용 조회는 진행하지 않습니다</p>
+                            <p>• 서류 확인 후 빠르게 한도를 산정해드립니다</p>
+                        </div>
+                    </div>
+                    <div class="notice-toggle">
+                        <span>자세히 보기</span>
+                        <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- 공지사항 7 -->
+                <div class="notice-card" onclick="toggleNotice(this)">
+                    <div class="notice-header">
+                        <div class="notice-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="notice-title-wrapper">
+                            <div class="notice-badges">
+                                <span class="notice-badge badge-notice">공지</span>
+                            </div>
+                            <h3 class="notice-title">7단계 진행 과정 안내</h3>
+                            <p class="notice-date">2025.12.28</p>
+                        </div>
+                    </div>
+                    <p class="notice-summary">서포트리 할인매매 서비스의 전체 진행 과정을 단계별로 안내드립니다.</p>
+                    <div class="notice-content">
+                        <div class="notice-detail">
+                            <p><strong>1단계: 상담 문의</strong> - 전화 또는 카카오톡으로 간편하게 상담을 시작하세요</p>
+                            <p><strong>2단계: 과거 매출 확인</strong> - 최근 3개월 간의 카드매출 데이터를 확인합니다</p>
+                            <p><strong>3단계: 한도 산정</strong> - 과거 매출 기반으로 할인매매 한도를 산정합니다</p>
+                            <p><strong>4단계: 진행 여부 확인</strong> - 한도 및 상환 조건을 확인하고 진행 여부를 결정합니다</p>
+                            <p><strong>5단계: 계약서 작성</strong> - 할인매매 및 단말기 계약서를 작성합니다</p>
+                            <p><strong>6단계: 단말기 발송 및 사용</strong> - 서포트리 전용 단말기를 매장에서 사용합니다</p>
+                            <p><strong>7단계: 사용 확인 후 입금</strong> - 단말기 사용이 확인되면 약정 금액을 입금합니다</p>
+                            <p><strong>소요 시간:</strong> 전체 과정은 평균 3일 이내에 완료됩니다</p>
+                        </div>
+                    </div>
+                    <div class="notice-toggle">
+                        <span>자세히 보기</span>
+                        <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- 공지사항 8 -->
+                <div class="notice-card" onclick="toggleNotice(this)">
+                    <div class="notice-header">
+                        <div class="notice-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="notice-title-wrapper">
+                            <div class="notice-badges">
+                                <span class="notice-badge badge-notice">공지</span>
+                            </div>
+                            <h3 class="notice-title">개인정보 보호 및 보안 정책</h3>
+                            <p class="notice-date">2025.12.20</p>
+                        </div>
+                    </div>
+                    <p class="notice-summary">고객님의 개인정보는 관련 법규에 따라 철저하게 보호되며 안전하게 관리됩니다.</p>
+                    <div class="notice-content">
+                        <div class="notice-detail">
+                            <p><strong>개인정보 보호:</strong></p>
+                            <p>• 모든 개인정보는 암호화되어 안전하게 저장됩니다</p>
+                            <p>• 개인정보보호법 및 신용정보법을 준수합니다</p>
+                            <p>• 제3자에게 정보를 제공하지 않습니다</p>
+                            <p>• 서비스 종료 시 개인정보를 즉시 파기합니다</p>
+                            <p><strong>정보 수집 범위:</strong></p>
+                            <p>• 사업자 정보: 사업자등록번호, 상호명</p>
+                            <p>• 대표자 정보: 성명, 연락처</p>
+                            <p>• 매출 정보: 카드매출 내역 (서비스 제공 목적)</p>
+                            <p><strong>문의:</strong> 개인정보 관련 문의는 고객센터(1660-1241)로 연락주세요</p>
+                        </div>
+                    </div>
+                    <div class="notice-toggle">
+                        <span>자세히 보기</span>
+                        <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- 공지사항 9 -->
+                <div class="notice-card" onclick="toggleNotice(this)">
+                    <div class="notice-header">
+                        <div class="notice-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V6H20V18ZM11 17H13V15H11V17ZM11 13H13V7H11V13Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="notice-title-wrapper">
+                            <div class="notice-badges">
+                                <span class="notice-badge badge-notice">공지</span>
+                            </div>
+                            <h3 class="notice-title">고객센터 운영 안내</h3>
+                            <p class="notice-date">2025.12.15</p>
+                        </div>
+                    </div>
+                    <p class="notice-summary">서포트리 고객센터 운영 시간 및 상담 방법을 안내드립니다.</p>
+                    <div class="notice-content">
+                        <div class="notice-detail">
+                            <p><strong>운영 시간:</strong></p>
+                            <p>• 전화 상담: 평일 9:00 ~ 18:00</p>
+                            <p>• 주말 및 공휴일: 휴무</p>
+                            <p>• 점심시간: 12:00 ~ 13:00 (상담 가능)</p>
+                            <p><strong>상담 방법:</strong></p>
+                            <p>• 전화 상담: 1660-1241</p>
+                            <p>• 카카오톡 상담: 빠른 상담 버튼 클릭 (플러스친구: 서포트리)</p>
+                            <p>• 이메일 문의: supportree1660@naver.com</p>
+                            <p><strong>자주 묻는 질문:</strong></p>
+                            <p>• FAQ 페이지에서 자주 묻는 질문과 답변을 확인하실 수 있습니다</p>
+                            <p>• 긴급한 문의는 전화 상담을 이용해주세요</p>
+                        </div>
+                    </div>
+                    <div class="notice-toggle">
+                        <span>자세히 보기</span>
+                        <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- 공지사항 10 -->
+                <div class="notice-card" onclick="toggleNotice(this)">
+                    <div class="notice-header">
+                        <div class="notice-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22ZM11 11V7H13V11H17V13H13V17H11V13H7V11H11Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="notice-title-wrapper">
+                            <div class="notice-badges">
+                                <span class="notice-badge badge-notice">공지</span>
+                            </div>
+                            <h3 class="notice-title">서포트리와 일반 대출의 차이점</h3>
+                            <p class="notice-date">2025.12.10</p>
+                        </div>
+                    </div>
+                    <p class="notice-summary">카드매출 할인매매는 전통적인 대출과 다른 방식의 자금 조달 솔루션입니다.</p>
+                    <div class="notice-content">
+                        <div class="notice-detail">
+                            <p><strong>할인매매의 장점:</strong></p>
+                            <p>• 신용 조회 없음: 신용등급에 영향을 주지 않습니다</p>
+                            <p>• 빠른 처리: 평균 3일 이내 자금 지급</p>
+                            <p>• 간편한 절차: 복잡한 서류 없이 카드매출 내역만으로 가능</p>
+                            <p>• 담보 불필요: 별도의 담보나 보증인이 필요 없습니다</p>
+                            <p><strong>일반 대출과의 차이:</strong></p>
+                            <p>• 대출: 신용 조회, 담보 필요, 장기 상환</p>
+                            <p>• 할인매매: 매출 기반, 담보 불필요, 단기 자금 확보</p>
+                            <p><strong>적합한 경우:</strong></p>
+                            <p>• 갑작스러운 운영자금이 필요할 때</p>
+                            <p>• 신용등급에 영향을 주고 싶지 않을 때</p>
+                            <p>• 빠른 사업 확장이 필요할 때</p>
+                        </div>
+                    </div>
+                    <div class="notice-toggle">
+                        <span>자세히 보기</span>
+                        <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">지금 바로 시작하세요</h2>
+            <p class="cta-subtitle">신용 조회 없이 빠르게 한도를 확인해보세요</p>
+            <div class="cta-buttons">
+                <a href="https://pf.kakao.com/_Ecxhxon/chat" target="_blank" rel="nofollow noopener" class="btn-cta btn-secondary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3C6.48 3 2 6.58 2 11C2 13.5 3.5 15.72 5.84 17.17L4.5 21L8.5 18.5C9.63 18.83 10.79 19 12 19C17.52 19 22 15.42 22 11C22 6.58 17.52 3 12 3Z" fill="currentColor"/>
+                    </svg>
+                    카카오톡 상담
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- 1칸: 회사 정보 -->
+                <div class="footer-section">
+                    <h4>회사 정보</h4>
+                    <p>유한회사 서포트리 | 대표 이동근</p>
+                    <p>사업자등록번호 152-81-04214</p>
+                    <p>부산광역시 남구 대연동 68-4 대성빌딩 4층 (48498)</p>
+                </div>
+
+                <!-- 2칸: 고객센터 -->
+                <div class="footer-section">
+                    <h4>고객센터</h4>
+                    <p>대표번호 1660-1241 | 팩스 0504-385-4674</p>
+                    <p>이메일 supportree1660@naver.com</p>
+                    <p>운영시간 평일 09:00 – 18:00</p>
+                </div>
+
+                <!-- 3칸: 로고, 설명, 빠른 상담 -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Supportree" class="footer-logo-icon">
+                    </div>
+                    <p class="footer-desc">자영업자를 위한 카드매출 할인매매 솔루션</p>
+                    <h4>빠른 상담</h4>
+                    <a href="https://pf.kakao.com/_Ecxhxon/chat" target="_blank" rel="nofollow noopener" class="footer-btn">카카오채널 상담</a>
+                    
+                    <!-- SNS 링크 -->
+                    <div class="footer-social">
+                        <a href="https://blog.naver.com/supportree1660" target="_blank" rel="nofollow noopener noreferrer" class="social-link social-link-naver" aria-label="네이버 블로그">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="-32 0 512 512" aria-label="네이버">
+                                <path fill="#03C75A" d="M16 32C11.8333 32 8.125 33.5833 4.875 36.75C1.625 39.9167 0 43.6667 0 48V464C0 468.333 1.625 472.083 4.875 475.25C8.125 478.417 11.8333 480 16 480H432C436.167 480 439.875 478.417 443.125 475.25C446.375 472.083 448 468.333 448 464V48C448 43.6667 446.375 39.9167 443.125 36.75C439.875 33.5833 436.167 32 432 32H16Z"></path>
+                                <path fill="#FFFFFF" d="M100.25 144H186.5L261.5 256V144H347.75V368H261.5L186.5 256V368H100.25V144Z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/supportree_office/" target="_blank" rel="nofollow noopener noreferrer" class="social-link" aria-label="인스타그램">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Supportree. All rights reserved.</p>
+                <p class="footer-privacy">개인정보책임자 : 김관우</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 모바일 메뉴 오버레이 -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="메뉴 닫기">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+            </button>
+            <nav class="mobile-menu-nav">
+                <a href="/" class="mobile-menu-link mobile-menu-main">홈</a>
+                <div class="mobile-menu-dropdown">
+                    <button class="mobile-menu-dropdown-btn" id="mobileDropdownBtn">
+                        <span>서포트리 소개</span>
+                        <svg class="mobile-dropdown-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown-content" id="mobileDropdownContent">
+                        <a href="index.html#process" class="mobile-menu-link mobile-menu-sub">진행과정</a>
+                        <a href="index.html#benefits" class="mobile-menu-link mobile-menu-sub">서비스 강점</a>
+                        <a href="index.html#testimonials" class="mobile-menu-link mobile-menu-sub">고객후기</a>
+                        <a href="index.html#cta" class="mobile-menu-link mobile-menu-sub">신청 방법</a>
+                    </div>
+                </div>
+                <a href="/press" class="mobile-menu-link mobile-menu-main">보도자료</a>
+                <a href="/faq" class="mobile-menu-link mobile-menu-main">자주 묻는 질문</a>
+                <a href="/notice" class="mobile-menu-link mobile-menu-main">공지사항</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <div class="floating-buttons">
+        <a href="https://pf.kakao.com/_Ecxhxon/chat" target="_blank" rel="nofollow noopener" class="floating-btn floating-kakao" aria-label="카카오채널 상담">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path d="M12 3c5.799 0 10.5 3.664 10.5 8.185 0 4.52-4.701 8.184-10.5 8.184a13.5 13.5 0 0 1-1.727-.11l-4.408 2.883c-.501.265-.678.236-.472-.413l.892-3.678c-2.88-1.46-4.785-3.99-4.785-6.866C1.5 6.665 6.201 3 12 3z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        // 모바일 메뉴
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // 공지사항 토글
+        function toggleNotice(card) {
+            const content = card.querySelector('.notice-content');
+            const isActive = card.classList.contains('active');
+            
+            // 모든 카드 닫기
+            document.querySelectorAll('.notice-card').forEach(c => {
+                c.classList.remove('active');
+                c.querySelector('.notice-content').classList.remove('active');
+            });
+            
+            // 클릭한 카드만 열기/닫기
+            if (!isActive) {
+                card.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

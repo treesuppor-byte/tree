@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- 메인 페이지 -->
+  <url>
+    <loc>https://supportree.net/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://supportree.net/images/og-image.jpg</image:loc>
+      <image:title>서포트리 - 카드매출 선지급 할인매매</image:title>
+      <image:caption>신용조회 없는 자영업자 할인매매 서비스</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- 자주 묻는 질문 -->
+  <url>
+    <loc>https://supportree.net/faq</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 공지사항 -->
+  <url>
+    <loc>https://supportree.net/notice</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- 보도자료 -->
+  <url>
+    <loc>https://supportree.net/press</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

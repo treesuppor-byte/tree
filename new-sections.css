@@ -1,0 +1,974 @@
+/* ==================== 새 설득 섹션 - 비교표 (프리미엄) ==================== */
+.comparison-section {
+    background: #FFFFFF;
+    padding: 96px 0;
+    position: relative;
+}
+
+.comparison-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.comparison-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1F2A44;
+    margin-bottom: 12px;
+}
+
+.comparison-subtitle {
+    font-size: 16px;
+    color: #4A5568;
+    margin-bottom: 48px;
+    line-height: 1.6;
+}
+
+.comparison-card-premium {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 16px;
+}
+
+.comparison-table thead th {
+    padding: 24px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1A1A1A;
+    border-bottom: 2px solid #EAEAEA;
+    text-align: center;
+    vertical-align: top;
+}
+
+.comparison-table thead th.general-col {
+    color: #9CA3AF;
+}
+
+.comparison-table thead th.highlight-col {
+    background: #F0FBF7;
+    color: #00D083;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.recommend-badge {
+    display: inline-block;
+    background: #E8F8F2;
+    color: #00D083;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+}
+
+.comparison-table thead th:first-child {
+    text-align: left;
+}
+
+.comparison-table tbody tr {
+    transition: none;
+}
+
+.comparison-table tbody td {
+    padding: 24px 20px;
+    text-align: center;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.comparison-table thead th.highlight-col + td,
+.comparison-table tbody td:last-child {
+    background: #F0FBF7;
+}
+
+.item-label {
+    font-weight: 700;
+    color: #1F2A44;
+    text-align: left;
+    font-size: 16px;
+}
+
+.negative-item {
+    color: #9CA3AF;
+    font-weight: 500;
+}
+
+.positive-item {
+    color: #00D083;
+    font-weight: 700;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.period-note {
+    font-size: 13px;
+    font-weight: 600;
+    color: #00D083;
+    opacity: 0.8;
+}
+
+.check-icon {
+    flex-shrink: 0;
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-notice {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #F0F0F0;
+    font-size: 13px;
+    color: #999999;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* ==================== 새 설득 섹션 - 추천 대상 ==================== */
+.target-audience-section {
+    background: #FFFFFF;
+    padding: 96px 0;
+}
+
+.target-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.target-card {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 16px;
+    padding: 40px 24px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+
+.target-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(118, 224, 186, 0.15);
+    border-color: #76E0BA;
+}
+
+.target-icon {
+    width: 64px;
+    height: 64px;
+    background: #EAF8F3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.4s ease;
+}
+
+.target-card:hover .target-icon {
+    background: linear-gradient(135deg, #76E0BA, #00D083);
+    transform: scale(1.1);
+}
+
+.target-icon svg {
+    color: #00D083;
+    transition: all 0.4s ease;
+    width: 28px;
+    height: 28px;
+}
+
+.target-card:hover .target-icon svg {
+    color: white;
+}
+
+.target-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1A1A1A;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+/* ==================== 새 설득 섹션 - 입금 타임라인 ==================== */
+.timeline-section {
+    background: #FFFFFF;
+    padding: 96px 0;
+}
+
+.timeline-subtitle {
+    font-size: 14px;
+    color: #999999;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.timeline-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.timeline-card {
+    flex: 1;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(118, 224, 186, 0.12);
+}
+
+.timeline-card-final {
+    border-color: #76E0BA;
+    background: linear-gradient(135deg, rgba(118, 224, 186, 0.03), rgba(174, 213, 129, 0.03));
+}
+
+.timeline-time {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1F2A44;
+    margin-bottom: 16px;
+    font-family: 'Courier New', monospace;
+}
+
+.timeline-card-final .timeline-time {
+    color: #00D083;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    background: #DFF5EC;
+    border: 3px solid #76E0BA;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+}
+
+.timeline-dot-final {
+    background: #00D083;
+    border-color: #00D083;
+}
+
+.timeline-content h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.timeline-content p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.timeline-arrow {
+    flex: 0 0 auto;
+    margin: 0 16px;
+    color: #DFF5EC;
+}
+
+.timeline-arrow svg {
+    display: block;
+}
+
+/* 모바일 전용 세로 타임라인 - 기본 숨김 */
+.timeline-vertical {
+    display: none;
+}
+
+/* ==================== Q&A 프리미엄 섹션 ==================== */
+.faq-premium-section {
+    background: #FFFFFF;
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-premium-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(118, 224, 186, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.faq-premium-section::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(174, 213, 129, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.faq-premium-section .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 64px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #E8F8F2, #DFF5EC);
+    color: #00D083;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(0, 208, 131, 0.2);
+}
+
+.faq-premium-section .section-header h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1F2A44;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.faq-premium-section .section-header p {
+    font-size: 17px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.faq-premium-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-premium-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 40px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(118, 224, 186, 0.3);
+    box-shadow: 0 16px 48px rgba(118, 224, 186, 0.15);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.faq-premium-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.faq-premium-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.faq-premium-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.faq-premium-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq-premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #76E0BA, #AED581);
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* PC에서 호버 시 기본 스타일로 변경 */
+.faq-premium-card:hover {
+    transform: translateY(0);
+    border-color: transparent;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.faq-premium-card:hover::before {
+    transform: scaleX(0);
+}
+
+/* Active 상태 (모바일 중앙에서만 사용) */
+.faq-premium-card.active {
+    transform: translateY(-8px);
+    border-color: rgba(118, 224, 186, 0.3);
+    box-shadow: 0 16px 48px rgba(118, 224, 186, 0.15);
+}
+
+.faq-premium-card.active::before {
+    transform: scaleX(1);
+}
+
+.faq-premium-card.active .faq-number {
+    color: rgba(118, 224, 186, 0.2);
+    transform: scale(1.1);
+}
+
+.faq-premium-card.active .faq-icon-wrapper {
+    background: linear-gradient(135deg, #76E0BA, #00D083);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 24px rgba(118, 224, 186, 0.4);
+}
+
+.faq-premium-card.active .faq-icon {
+    color: #FFFFFF;
+    transform: scale(1.1);
+}
+
+.faq-premium-card.active .faq-badge {
+    background: linear-gradient(135deg, rgba(118, 224, 186, 0.2), rgba(174, 213, 129, 0.2));
+    border-color: rgba(0, 208, 131, 0.4);
+    transform: translateX(4px);
+}
+
+/* Inactive 상태 (모바일에서만 사용) */
+.faq-premium-card.inactive {
+    opacity: 0.5;
+    transform: scale(0.98);
+}
+
+.faq-number {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    font-size: 60px;
+    font-weight: 900;
+    color: rgba(118, 224, 186, 0.2);
+    line-height: 1;
+    font-family: 'Courier New', monospace;
+    transition: all 0.4s ease;
+    transform: scale(1.1);
+}
+
+/* PC에서 호버 시 기본 스타일로 */
+@media (min-width: 769px) {
+    .faq-premium-card:hover .faq-number {
+        color: rgba(118, 224, 186, 0.12);
+        transform: scale(1);
+    }
+}
+
+.faq-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #76E0BA, #00D083);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 24px rgba(118, 224, 186, 0.4);
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* PC에서 호버 시 기본 스타일로 */
+@media (min-width: 769px) {
+    .faq-premium-card:hover .faq-icon-wrapper {
+        background: linear-gradient(135deg, #E8F8F2, #DFF5EC);
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 4px 16px rgba(118, 224, 186, 0.2);
+    }
+}
+
+.faq-icon {
+    width: 32px;
+    height: 32px;
+    color: #FFFFFF;
+    transition: all 0.4s ease;
+    transform: scale(1.1);
+}
+
+/* PC에서 호버 시 기본 스타일로 */
+@media (min-width: 769px) {
+    .faq-premium-card:hover .faq-icon {
+        color: #00D083;
+        transform: scale(1);
+    }
+}
+
+.faq-content {
+    margin-bottom: 20px;
+}
+
+.faq-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1F2A44;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+.faq-description {
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.8;
+    word-break: keep-all;
+}
+
+.faq-description strong {
+    color: #00D083;
+    font-weight: 700;
+}
+
+.faq-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, rgba(118, 224, 186, 0.2), rgba(174, 213, 129, 0.2));
+    color: #00D083;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 208, 131, 0.4);
+    transition: all 0.3s ease;
+    transform: translateX(4px);
+}
+
+/* PC에서 호버 시 기본 스타일로 */
+@media (min-width: 769px) {
+    .faq-premium-card:hover .faq-badge {
+        background: linear-gradient(135deg, rgba(118, 224, 186, 0.1), rgba(174, 213, 129, 0.1));
+        border-color: rgba(0, 208, 131, 0.2);
+        transform: translateX(0);
+    }
+}
+
+/* ==================== 섹션 간격 통일 ==================== */
+section {
+    padding: 96px 0;
+}
+
+.section-header {
+    margin-bottom: 48px;
+}
+
+.section-header h2 {
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    line-height: 1.6;
+}
+
+/* ==================== 모바일 반응형 ==================== */
+@media (max-width: 768px) {
+    /* 섹션 간격 */
+    section {
+        padding: 64px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 28px;
+        padding-top: 0;
+    }
+    
+    /* 비교표 모바일 */
+    .comparison-section {
+        padding: 64px 0;
+    }
+    
+    .comparison-title {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    
+    .comparison-subtitle {
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+    
+    .comparison-card-premium {
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+    
+    .comparison-table {
+        font-size: 13px;
+    }
+    
+    .comparison-table thead th {
+        padding: 16px 8px;
+        font-size: 13px;
+    }
+    
+    .recommend-badge {
+        font-size: 11px;
+        padding: 4px 12px;
+        margin-bottom: 6px;
+    }
+    
+    .comparison-table tbody td {
+        padding: 16px 8px;
+    }
+    
+    .item-label {
+        font-size: 13px;
+    }
+    
+    .positive-item {
+        font-size: 14px;
+        gap: 4px;
+    }
+    
+    .period-note {
+        font-size: 11px;
+    }
+    
+    .check-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .comparison-notice {
+        margin-top: 20px;
+        padding-top: 16px;
+        font-size: 11px;
+        line-height: 1.5;
+    }
+    
+    /* 추천 대상 모바일 */
+    .target-audience-section {
+        padding: 40px 0 48px 0;
+    }
+    
+    .target-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        max-width: 100%;
+    }
+    
+    .target-card {
+        padding: 20px 12px;
+        border-radius: 12px;
+    }
+    
+    .target-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    
+    .target-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .target-card h3 {
+        font-size: 12px;
+        line-height: 1.4;
+        word-break: keep-all;
+    }
+    
+    /* 타임라인 모바일 - 가로 숨김, 세로 표시 */
+    .timeline-section {
+        padding: 64px 0;
+    }
+    
+    .timeline-wrapper {
+        display: none;
+    }
+    
+    .timeline-vertical {
+        display: block;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .timeline-step {
+        display: flex;
+        gap: 20px;
+        position: relative;
+        padding-bottom: 32px;
+    }
+    
+    .timeline-step:last-child {
+        padding-bottom: 0;
+    }
+    
+    .step-indicator {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .step-dot {
+        width: 16px;
+        height: 16px;
+        background: #FFFFFF;
+        border: 3px solid #76E0BA;
+        border-radius: 50%;
+        z-index: 2;
+        position: relative;
+    }
+    
+    .step-dot-final {
+        background: #00D083;
+        border-color: #00D083;
+        box-shadow: 0 0 0 4px rgba(0, 208, 131, 0.1);
+    }
+    
+    .step-line {
+        width: 2px;
+        flex: 1;
+        background: #DFF5EC;
+        margin-top: 8px;
+        min-height: 40px;
+    }
+    
+    .step-content {
+        flex: 1;
+        text-align: left;
+    }
+    
+    .step-time {
+        font-size: 16px;
+        font-weight: 800;
+        color: #1F2A44;
+        margin-bottom: 8px;
+        font-family: 'Courier New', monospace;
+    }
+    
+    .timeline-step:last-child .step-time {
+        color: #00D083;
+    }
+    
+    .step-content h4 {
+        font-size: 17px;
+        font-weight: 700;
+        color: #1A1A1A;
+        margin-bottom: 6px;
+        line-height: 1.4;
+    }
+    
+    .step-content p {
+        font-size: 14px;
+        color: #666666;
+        line-height: 1.6;
+    }
+    
+    .timeline-subtitle {
+        font-size: 13px;
+        margin-bottom: 32px;
+    }
+    
+    /* Q&A 모바일 */
+    .faq-premium-section {
+        padding: 64px 0;
+    }
+    
+    .faq-premium-section::before,
+    .faq-premium-section::after {
+        display: none;
+    }
+    
+    .faq-premium-section .section-header {
+        margin-bottom: 40px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    .section-badge {
+        font-size: 12px;
+        padding: 6px 16px;
+        margin-bottom: 16px;
+        display: inline-block;
+    }
+    
+    .faq-premium-section .section-header h2 {
+        font-size: 26px;
+        margin-bottom: 12px;
+        text-align: center;
+        word-break: keep-all;
+    }
+    
+    .faq-premium-section .section-header p {
+        font-size: 15px;
+        text-align: center;
+        word-break: keep-all;
+    }
+    
+    .faq-premium-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    .faq-premium-card {
+        padding: 28px 24px;
+        border-radius: 20px;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        /* 모바일에서는 기본 스타일 (비활성화) */
+        border: 2px solid transparent;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+    
+    .faq-premium-card::before {
+        transform: scaleX(0);
+    }
+    
+    /* 모바일에서 active/inactive 전환 부드럽게 */
+    .faq-premium-card.inactive {
+        opacity: 0.4;
+        transform: scale(0.96);
+    }
+    
+    .faq-premium-card.active {
+        opacity: 1;
+        transform: scale(1) translateY(-4px);
+        border-color: rgba(118, 224, 186, 0.3);
+        box-shadow: 0 16px 48px rgba(118, 224, 186, 0.15);
+    }
+    
+    .faq-premium-card.active::before {
+        transform: scaleX(1);
+    }
+    
+    /* 모바일에서 아이콘 기본 스타일 */
+    .faq-icon-wrapper {
+        background: linear-gradient(135deg, #E8F8F2, #DFF5EC);
+        box-shadow: 0 4px 16px rgba(118, 224, 186, 0.2);
+        transform: scale(1) rotate(0deg);
+    }
+    
+    .faq-icon {
+        color: #00D083;
+        transform: scale(1);
+    }
+    
+    .faq-number {
+        color: rgba(118, 224, 186, 0.12);
+        transform: scale(1);
+    }
+    
+    .faq-badge {
+        background: linear-gradient(135deg, rgba(118, 224, 186, 0.1), rgba(174, 213, 129, 0.1));
+        border-color: rgba(0, 208, 131, 0.2);
+        transform: translateX(0);
+    }
+    
+    /* active 시 활성화 스타일 */
+    .faq-premium-card.active .faq-icon-wrapper {
+        background: linear-gradient(135deg, #76E0BA, #00D083);
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 8px 24px rgba(118, 224, 186, 0.4);
+    }
+    
+    .faq-premium-card.active .faq-icon {
+        color: #FFFFFF;
+        transform: scale(1.1);
+    }
+    
+    .faq-premium-card.active .faq-number {
+        color: rgba(118, 224, 186, 0.2);
+        transform: scale(1.1);
+    }
+    
+    .faq-premium-card.active .faq-badge {
+        background: linear-gradient(135deg, rgba(118, 224, 186, 0.2), rgba(174, 213, 129, 0.2));
+        border-color: rgba(0, 208, 131, 0.4);
+        transform: translateX(4px);
+    }
+    
+    .faq-number {
+        font-size: 48px;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .faq-icon-wrapper {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 20px;
+        border-radius: 14px;
+    }
+    
+    .faq-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .faq-content {
+        margin-bottom: 16px;
+    }
+    
+    .faq-title {
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+    
+    .faq-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    
+    .faq-badge {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+}
+
+/* 매우 작은 화면 (360px 이하) */
+@media (max-width: 380px) {
+    .comparison-title {
+        font-size: 22px;
+    }
+    
+    .target-card h3 {
+        font-size: 14px;
+    }
+}

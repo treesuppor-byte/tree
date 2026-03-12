@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url=https://supportree.net/">
+    <link rel="canonical" href="https://supportree.net/">
+    
+    <!-- 301 Redirect 시뮬레이션 -->
+    <meta name="robots" content="noindex, follow">
+    
+    <title>페이지 이동 중... - 서포트리</title>
+    
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #E8F8F2 0%, #FFFFFF 100%);
+        }
+        .redirect-container {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        .logo {
+            width: 120px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #1F2A44;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        p {
+            color: #6B7280;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+            border: 4px solid #E8F8F2;
+            border-top: 4px solid #00D083;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #00D083;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .link:hover {
+            background: #00B872;
+            transform: translateY(-2px);
+        }
+    </style>
+    
+    <script>
+        // JavaScript 리디렉션 (백업)
+        window.location.replace("https://supportree.net/");
+    </script>
+</head>
+<body>
+    <div class="redirect-container">
+        <img src="images/logo.png" alt="서포트리" class="logo" onerror="this.style.display='none'">
+        <h1>페이지 이동 중입니다</h1>
+        <p>요청하신 페이지가 새로운 주소로 이동했습니다.<br>잠시만 기다려주세요...</p>
+        <div class="spinner"></div>
+        <a href="https://supportree.net/" class="link">메인페이지로 이동</a>
+    </div>
+    
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=https://supportree.net/">
+        <p style="text-align: center; padding: 20px;">
+            JavaScript가 비활성화되어 있습니다. 
+            <a href="https://supportree.net/">여기를 클릭</a>하여 메인페이지로 이동하세요.
+        </p>
+    </noscript>
+</body>
+</html>
