@@ -1138,3 +1138,6 @@ section {
         height: 36px;
     }
 }
+.custom-play-button.hidden {
+    display: none !important;
+}
