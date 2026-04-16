@@ -871,7 +871,7 @@ window.addEventListener('DOMContentLoaded', () => {
     new FAQAccordion();
     new SmoothScrollNav();
     
-    // VIDEO PLAYER
+    // 📹 비디오 플레이어
     const playButton = document.getElementById('playButton');
     const video = document.getElementById('myVideo');
 
