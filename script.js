@@ -871,30 +871,49 @@ window.addEventListener('DOMContentLoaded', () => {
     new FAQAccordion();
     new SmoothScrollNav();
     
-// 📹 비디오 플레이어
+// 📹 비디오 플레이어 (중앙 버튼 ↔ 하단 컨트롤 완벽 동기화)
 const playButton = document.getElementById('playButton');
 const video = document.getElementById('myVideo');
 
 if (playButton && video) {
-    // 중앙 플레이 버튼 클릭
+    // 버튼 표시/숨김을 video 상태에 따라 동기화하는 헬퍼 함수
+    // → 어떤 경로로 재생/일시정지가 발생했든 항상 올바른 상태를 보장
+    const syncButton = () => {
+        if (video.paused || video.ended) {
+            playButton.classList.remove('hidden');
+        } else {
+            playButton.classList.add('hidden');
+        }
+    };
+
+    // 1) 중앙 플레이 버튼 클릭 → 재생 시작
     playButton.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        video.play();
+        // play()는 Promise를 반환 → 실패 시(자동재생 차단 등) 버튼을 다시 표시
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(() => {
+                playButton.classList.remove('hidden');
+            });
+        }
     });
 
-    // 비디오 재생 중 → 중앙 버튼 숨기기
-    video.addEventListener('play', function() {
-        playButton.classList.add('hidden');
-    });
+    // 2) 재생 시작 이벤트 (중앙 버튼, 하단 컨트롤, 키보드 스페이스바 등 모든 경로)
+    video.addEventListener('play', syncButton);
+    video.addEventListener('playing', syncButton); // 버퍼링 후 재생 재개 시
 
-    // 일시정지 → 중앙 버튼 보이기
-    video.addEventListener('pause', function() {
-        playButton.classList.remove('hidden');
-    });
+    // 3) 일시정지 이벤트 (모든 경로: 하단 컨트롤, 비디오 클릭, 키보드 등)
+    video.addEventListener('pause', syncButton);
 
-    // 재생 종료 → 중앙 버튼 보이기
-    video.addEventListener('ended', function() {
-        playButton.classList.remove('hidden');
-    });
+    // 4) 재생 종료
+    video.addEventListener('ended', syncButton);
+
+    // 5) 게이지바 드래그(seeking/seeked) 중에도 상태 유지
+    video.addEventListener('seeked', syncButton);
+
+    // 6) 초기 상태 동기화 (혹시 모를 상태 불일치 방지)
+    syncButton();
 }
+
+}); // DOMContentLoaded 닫기
