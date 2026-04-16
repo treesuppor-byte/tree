@@ -863,24 +863,42 @@ class SmoothScrollNav {
 
 // ==================== 페이지 로드 시 초기화 ====================
 window.addEventListener('DOMContentLoaded', () => {
-    // 원형 흐름 초기화
     new CircleFlow();
-    
-    // 3단계 애니메이션 초기화
     new ThreeStepAnimation();
-    
-    // 실시간 승인 현황 초기화
     new RealtimeApprovals();
-    
-    // 신뢰 지표 초기화
     new TrustMetrics();
-    
-    // 모바일 메뉴 초기화
     new MobileMenu();
-    
-    // FAQ 아코디언 초기화
     new FAQAccordion();
-    
-    // 스무스 스크롤 네비게이션 초기화
     new SmoothScrollNav();
+    
+    // VIDEO PLAYER
+    const playButton = document.getElementById('playButton');
+    const video = document.getElementById('myVideo');
+
+    if (playButton && video) {
+        playButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            video.play();
+            playButton.classList.add('hidden');
+        });
+
+        video.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+                playButton.classList.add('hidden');
+            } else {
+                video.pause();
+                playButton.classList.remove('hidden');
+            }
+        });
+
+        video.addEventListener('pause', function() {
+            playButton.classList.remove('hidden');
+        });
+
+        video.addEventListener('ended', function() {
+            playButton.classList.remove('hidden');
+        });
+    }
 });
