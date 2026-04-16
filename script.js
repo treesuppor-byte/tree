@@ -871,34 +871,30 @@ window.addEventListener('DOMContentLoaded', () => {
     new FAQAccordion();
     new SmoothScrollNav();
     
-    // 📹 비디오 플레이어
-    const playButton = document.getElementById('playButton');
-    const video = document.getElementById('myVideo');
+// 📹 비디오 플레이어
+const playButton = document.getElementById('playButton');
+const video = document.getElementById('myVideo');
 
-    if (playButton && video) {
-        playButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            video.play();
-            playButton.classList.add('hidden');
-        });
+if (playButton && video) {
+    // 중앙 플레이 버튼 클릭
+    playButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        video.play();
+    });
 
-        video.addEventListener('click', function() {
-            if (video.paused) {
-                video.play();
-                playButton.classList.add('hidden');
-            } else {
-                video.pause();
-                playButton.classList.remove('hidden');
-            }
-        });
+    // 비디오 재생 중 → 중앙 버튼 숨기기
+    video.addEventListener('play', function() {
+        playButton.classList.add('hidden');
+    });
 
-        video.addEventListener('pause', function() {
-            playButton.classList.remove('hidden');
-        });
+    // 일시정지 → 중앙 버튼 보이기
+    video.addEventListener('pause', function() {
+        playButton.classList.remove('hidden');
+    });
 
-        video.addEventListener('ended', function() {
-            playButton.classList.remove('hidden');
-        });
-    }
-});
+    // 재생 종료 → 중앙 버튼 보이기
+    video.addEventListener('ended', function() {
+        playButton.classList.remove('hidden');
+    });
+}
