@@ -1,16 +1,9 @@
 <!doctype html>
-<!-- 자동 생성된 파일입니다. 직접 수정하지 말고 src/ 폴더를 수정한 뒤 python build.py 를 실행하세요. -->
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MBCLLTC9');</script>
-<!-- End Google Tag Manager -->
+    {{ANALYTICS}}
     <title>서포트리 | 카드단말기 매출에서 내 통장까지, 최고의 비즈니스 결제 솔루션</title>
     <meta
       name="description"
@@ -67,8 +60,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "alternateName": "Supportree",
             "url": "https://supportree.net/",
             "logo": "https://supportree.net/img/supportree-logo.png",
-            "telephone": "+82-1660-1241",
-            "email": "supportree1660@naver.com",
+            "telephone": "{{PHONE_INTL}}",
+            "email": "{{EMAIL}}",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "대연동 68-4 대성빌딩 4층",
@@ -80,7 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "sameAs": [
               "https://blog.naver.com/supportree1660",
               "https://www.instagram.com/supportree_office/",
-              "https://pf.kakao.com/_Ecxhxon"
+              "{{KAKAO_CHANNEL}}"
             ]
           },
           {
@@ -98,35 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </head>
   <body class="page-home" data-page="home">
     <a class="skip-link" href="#main-content">본문 바로가기</a>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBCLLTC9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<header class="site-header" data-site-header>
-  <div class="container site-header__inner">
-    <a class="site-logo" href="/" aria-label="서포트리 홈으로 이동">
-      <img src="/img/supportree-logo.png" width="640" height="219" alt="서포트리 Supportree">
-    </a>
-
-    <nav class="site-nav" aria-label="주요 메뉴">
-      <a class="site-nav__link" href="/" data-nav="home">홈</a>
-      <a class="site-nav__link" href="/services" data-nav="services">결제 서비스</a>
-      <a class="site-nav__link" href="/pplus" data-nav="pplus">P플 서비스</a>
-      <a class="site-nav__link" href="/about" data-nav="about">회사소개</a>
-      <a class="site-nav__link" href="/support" data-nav="support">고객지원</a>
-    </nav>
-
-    <div class="site-header__actions">
-      <a class="button button--primary button--small" href="https://pf.kakao.com/_Ecxhxon/chat" target="_blank" rel="noopener noreferrer">
-        상담하기
-        <span class="icon icon-arrow" aria-hidden="true"></span>
-      </a>
-      <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle>
-        <span class="icon icon-menu" aria-hidden="true" data-menu-icon></span>
-      </button>
-    </div>
-  </div>
-</header>
+    {{HEADER}}
 
     <nav
       class="mobile-nav"
@@ -146,7 +111,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         >
         <a
           class="button button--primary"
-          href="https://pf.kakao.com/_Ecxhxon/chat"
+          href="{{KAKAO_URL}}"
           target="_blank"
           rel="noopener noreferrer"
           >카카오채널 상담</a
@@ -209,7 +174,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               ></a>
               <a
                 class="button button--primary"
-                href="https://pf.kakao.com/_Ecxhxon/chat"
+                href="{{KAKAO_URL}}"
                 target="_blank"
                 rel="noopener noreferrer"
                 >상담 시작하기
@@ -742,7 +707,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 ></span>
               </summary>
               <div class="faq-item__answer">
-                대표번호 1660-1241 또는 카카오채널 ‘서포트리’를 통해 평일
+                대표번호 {{PHONE}} 또는 카카오채널 ‘서포트리’를 통해 평일
                 09:00–18:00에 상담할 수 있습니다.
               </div>
             </details>
@@ -762,12 +727,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="home-cta__actions">
               <a
                 class="button button--primary"
-                href="https://pf.kakao.com/_Ecxhxon/chat"
+                href="{{KAKAO_URL}}"
                 target="_blank"
                 rel="noopener noreferrer"
                 >카카오채널 상담</a
-              ><a class="button button--secondary" href="tel:1660-1241"
-                >1660-1241 전화하기</a
+              ><a class="button button--secondary" href="tel:{{PHONE}}"
+                >{{PHONE}} 전화하기</a
               >
             </div>
           </div>
@@ -775,62 +740,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </section>
     </main>
 
-<footer class="site-footer">
-  <div class="container site-footer__main">
-    <div class="site-footer__brand">
-      <img src="/img/supportree-logo.png" width="640" height="219" loading="lazy" alt="서포트리 Supportree">
-      <strong class="site-footer__statement">비즈니스 결제의<br>새로운 기준을 만듭니다.</strong>
-      <p class="site-footer__description">결제가 시작되는 순간부터 정산과 운영 관리까지, 사업자의 흐름이 끊기지 않도록 연결합니다.</p>
-    </div>
-
-    <nav class="site-footer__nav" aria-label="푸터 메뉴">
-      <div>
-        <h2 class="site-footer__title">서비스</h2>
-        <ul class="site-footer__list">
-          <li><a href="/services#terminal">단말기 결제</a></li>
-          <li><a href="/services#online">온라인 결제</a></li>
-          <li><a href="/services#settlement">정산 서비스</a></li>
-          <li><a href="/pplus">P플 서비스</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="site-footer__title">서포트리</h2>
-        <ul class="site-footer__list">
-          <li><a href="/about">회사 소개</a></li>
-          <li><a href="/support#faq">자주 묻는 질문</a></li>
-          <li><a href="/support#notice">공지사항</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="site-footer__contact">
-      <p class="site-footer__title">상담 안내</p>
-      <a class="site-footer__phone" href="tel:1660-1241">1660-1241</a>
-      <p class="site-footer__hours">평일 09:00–18:00</p>
-      <a class="site-footer__email" href="mailto:supportree1660@naver.com">supportree1660@naver.com</a>
-      <a class="site-footer__chat" href="https://pf.kakao.com/_Ecxhxon/chat" target="_blank" rel="noopener noreferrer">카톡 상담하기</a>
-    </div>
-  </div>
-
-  <div class="container site-footer__company">
-    <div class="site-footer__company-info">
-      <strong>유한회사 서포트리</strong>
-      <span>대표 이동근</span>
-      <span>사업자등록번호 152-81-04214</span>
-      <span>개인정보책임자 김관우</span>
-    </div>
-    <p>부산광역시 남구 대연동 68-4 대성빌딩 4층</p>
-  </div>
-
-  <div class="container site-footer__bottom">
-    <p>© 2026 Supportree. All rights reserved.</p>
-    <p>Payment flow for better business.</p>
-  </div>
-</footer>
+{{FOOTER}}
 
     <a
       class="floating-contact"
-      href="https://pf.kakao.com/_Ecxhxon/chat"
+      href="{{KAKAO_URL}}"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="카카오채널로 상담하기"

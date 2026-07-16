@@ -1,0 +1,17 @@
+{
+  "name": "서포트리",
+  "short_name": "서포트리",
+  "lang": "ko-KR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#17855d",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
