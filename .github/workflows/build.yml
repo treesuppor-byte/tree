@@ -1,0 +1,41 @@
+# .github/workflows/build.yml
+# src/ 안의 파일이 수정되어 push되면 build.py를 자동 실행하고
+# 생성된 루트 HTML을 자동 커밋합니다.
+name: Build site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "build.py"
+  workflow_dispatch: {}   # Actions 탭에서 수동 실행 버튼도 제공
+
+permissions:
+  contents: write         # 봇이 결과물을 커밋할 수 있도록
+
+concurrency:
+  group: build-site
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run build.py
+        run: python build.py
+
+      - name: Commit generated HTML
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "변경 없음 — 커밋 생략" && exit 0
+          git commit -m "chore: build.py 자동 빌드 결과"
+          git push
