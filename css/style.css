@@ -385,7 +385,7 @@ main > section[data-journey] {
   flex: 0 0 auto;
 }
 .site-logo img {
-  width: 84px;
+  width: clamp(150px, 14vw, 190px);
   height: auto;
 }
 .site-nav {
@@ -561,7 +561,7 @@ main > section[data-journey] {
   padding-top: 80px;
 }
 .site-footer__brand img {
-  width: 62px;
+  width: 160px;
 }
 .site-footer__statement {
   display: block;
